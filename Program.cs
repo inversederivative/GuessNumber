@@ -7,23 +7,16 @@ namespace GuessingGame
 {
     class GuessNumber
     {
-        int GenerateNumber()
+        static int GenerateNumber()
         {
             Random rnd = new Random();
-            return rnd.Next(0, 10);
-        }
-
-        int GenerateNumber(int maxVal)
-        {
-            Random rnd = new Random();
-            return rnd.Next(0, maxVal);
+            return rnd.Next(1, 10);
         }
 
         public static int Main(String[] args)
         {
             // Generate Number
-            GuessNumber gn = new GuessNumber();
-            int Number = gn.GenerateNumber();
+            int Number = GuessNumber.GenerateNumber();
 
             int NumOfTries = 3;
 
